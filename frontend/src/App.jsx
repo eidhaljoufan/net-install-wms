@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <h2 className="text-4xl text-center font-bold text-blue-700">Welcome to Net-Install-WMS</h2>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
