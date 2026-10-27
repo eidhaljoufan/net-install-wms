@@ -1,23 +1,26 @@
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import DashboardPage from './pages/DashboardPage'
+import WarehousePage from './pages/WarehousePage'
+import WorkOrdersPage from './pages/WorkOrdersPage'
+import ProjectsPage from './pages/ProjectsPage'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      
-      <section id="center" className="grid grid-cols-1 md:grid-cols-[9rem_minmax(0,2fr)] md:justify-start justify-center mt-8">
-        <aside className="grid grid-cols-1 m-2 w-full md:w-48 text-center gap-4 bg-slate-400 text-white p-4 rounded-lg shadow-xl">
-          <h2 className="grid ">System Management Modules</h2>
-          <div className="flex text-center gap-6 flex-row md:flex-col my-2">
-            <nav><a href="">Dashboard</a></nav>
-            <nav><a href="">Warehouse</a></nav>
-            <nav><a href="">Work Orders</a></nav>
-            <nav><a href="">Projects</a></nav>
-          </div>
-        </aside>
-
+      <Header />
+      <section id="center" className="grid grid-cols-1 md:grid-cols-[8rem_minmax(0,1fr)] md:justify-start justify-center mt-2">
+        <Sidebar />
         <main>
-          <h1 className="text-3xl font-bold text-center">ERP Dashboard</h1>
+          <Routes>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/warehouse" element={<WarehousePage />} />
+            <Route path="/work-orders" element={<WorkOrdersPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+          </Routes>
         </main>
 
       </section>
