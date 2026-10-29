@@ -11,20 +11,20 @@ function App() {
 
   return (
     <>
+    <div>
       <Header />
-      <section id="center" className="grid grid-cols-1 md:grid-cols-[8rem_minmax(0,1fr)] md:justify-start justify-center mt-2">
-        <Sidebar />
-        <main>
-          <Routes>
-            <Route path="/" element={<DashboardPage />} />
-            <Route path="/warehouse" element={<WarehousePage />} />
-            <Route path="/work-orders" element={<WorkOrdersPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-          </Routes>
-        </main>
-
-      </section>
-
+        <div id="center" className="min-h-screen grid grid-cols-1 md:grid-cols-[8rem_minmax(0,1fr)] md:justify-start justify-center mt-2">
+          <Sidebar />
+          <main>
+            <Routes>
+              <Route path="/" element={<DashboardPage />} />
+              <Route path="/warehouse" element={<WarehousePage />} />
+              <Route path="/work-orders" element={<WorkOrdersPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+            </Routes>
+          </main>
+        </div>
+    </div>
     </>
   )
 }
