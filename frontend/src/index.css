@@ -2,19 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #1542af;
-  --color-brand-secondary: #1472df;
+  --color-primary: #0F3B7A;
+  --color-secondary: #009FE3;
 
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-body: "jetbrains mono", monospace;
 }
 
  :root {
-  --bg: #dadee3; 
-  --border: #e5e4e7; 
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(81, 59, 251, 0.1);
+  --bg: #c9d2df; 
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
@@ -42,36 +38,21 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 40px;
   letter-spacing: -1.68px;
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin: 10px 0;
   }
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
+  font-size: 28px;
+  line-height: 150%;
   letter-spacing: -0.24px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 p {
   margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }
