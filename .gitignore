@@ -2,6 +2,7 @@
 node_modules/
 dist/
 coverage/
+documentation/
 .vite/
 
 # Environment files and secrets

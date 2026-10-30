@@ -10,9 +10,9 @@
 }
 
  :root {
-  --bg: #c9d2df; 
+  --bg: #bfc9d6; 
   --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --social-bg: #eceef4;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(7, 31, 98, 0.05) 0 4px 6px -2px;
 
