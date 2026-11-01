@@ -11,8 +11,6 @@
 
  :root {
   --bg: #bfc9d6; 
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: #eceef4;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(7, 31, 98, 0.05) 0 4px 6px -2px;
 
@@ -20,7 +18,7 @@
   --heading: "Plus Jakarta Sans", sans-serif;
   --mono: "jetbrains mono", monospace;
 
-  font: 18px/145% var(--sans);
+  font: 18px/135% var(--sans);
   letter-spacing: 0.1px;
   color: var(--text);
   background: var(--bg);
