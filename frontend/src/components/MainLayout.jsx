@@ -1,18 +1,36 @@
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Sidebar from './Sidebar'
 
-export default function MainLayout(){
+const MainLayout = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen((prev) => !prev);
+    };
+
     return (
-        <div className="min-h-screen">
-            <div className="grid grid-cols-1 md:grid-cols-[12.5rem_minmax(0,1fr)] 2xl:grid-cols-[13rem_minmax(0,1fr)] 3xl:grid-cols-[15rem_minmax(0,1fr)] gap-4 p-4">
-                <Sidebar />
+        <div className="min-h-screen flex flex-col md:flex-row bg-gradient-to-b from-primary/90 via-secondary/30 to-primary/70 backdrop-blur-md border-white/20 shadow-md rounded-xl text-white p-4 mb-1 mx-1">
+            <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+            {isSidebarOpen && (
+                <div
+                    onClick={toggleSidebar}
+                    className="fixed inset-0 bg-black/50 z-10 md:hidden"
+                />
+            )}
+
+            <div className="flex-1 flex flex-col">
+                <Header toggleSidebar={toggleSidebar} />
                 
-                <main className="">
-                    <Header />
+                <main className="flex-1 p-4 md:p-6 bg-gradient-to-b from-primary/90 via-secondary/30 to-primary/70 backdrop-blur-md border-white/20 shadow-md rounded-xl text-white">    
                     <Outlet />
                 </main>
+
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default MainLayout;
